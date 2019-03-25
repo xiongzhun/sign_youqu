@@ -12,7 +12,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - python sign_youqu_tmp.py sign_all
+#  - python sign_youqu_tmp.py sign_all
 
 
 after_script:
