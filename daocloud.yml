@@ -25,11 +25,11 @@ stages:
     - .*
   before_script:
   - ""
-  image: ubuntu:16.04
+  image: centos:centos6.7
   install:
-  - python sign_youqu_tmp.py chat_all
-  - python sign_youqu_tmp.py comment_all
-  - python sign_youqu_tmp.py sign_all
+  - git clone -b master https://github.com/xiongzhun/sign_youqu.git
+  - cd sign_youqu
+  - pip install -r requirements.txt
   script:
   - python sign_youqu_tmp.py chat_all
   - python sign_youqu_tmp.py comment_all
