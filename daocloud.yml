@@ -27,6 +27,7 @@ stages:
   - ""
   image: centos:centos6.7
   install:
+  - yum –y install git
   - git clone -b master https://github.com/xiongzhun/sign_youqu.git
   - cd sign_youqu
   - pip install -r requirements.txt
