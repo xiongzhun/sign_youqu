@@ -1,19 +1,6 @@
 version: 3
 stages:
 - 测试阶段
-- 构建阶段
-默认构建任务:
-  label: release-image
-  stage: 构建阶段
-  job_type: image_build
-  only:
-    branches:
-    - .*
-    tags:
-    - .*
-  build_dir: /
-  cache: true
-  dockerfile_path: /Dockerfile
 默认测试任务:
   label: develop
   stage: 测试阶段
@@ -31,6 +18,6 @@ stages:
   - cd sign_youqu
   - pip install -r requirements.txt
   script:
+  - python sign_youqu_tmp.py sign_all
   - python sign_youqu_tmp.py chat_all
   - python sign_youqu_tmp.py comment_all
-  - python sign_youqu_tmp.py sign_all
