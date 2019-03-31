@@ -183,7 +183,7 @@ def view_activities(c, user_id, objectId):
 
 def comment_activities(c, user_id, targetId):
     url = "http://iyouqu.com.cn:8080/app/service.do"
-    Content = ['点赞', '强大[微笑]', '加油[微笑][微笑][微笑]', '公司越来越强大[微笑]', '真棒', ]
+    Content = ['good！手动点赞', '更加强大[微笑]', '加油[微笑][微笑][微笑]再接再厉', '公司越来越强大[微笑]，再接再厉！', '真棒','厉害了','愈强大','wonderful','good']
     our_content = random.sample(Content, 1)[0]
     params = {
         "userId": user_id,
